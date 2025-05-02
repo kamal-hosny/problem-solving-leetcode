@@ -1,7 +1,21 @@
-function sumArray(arr) {
-    return arr.reduce((sum, num) => sum + num, 0);
-}
+/**
+ * @return {null|boolean|number|string|Array|Object}
+ */
 
-// اختبار الكود
-console.log(sumArray([1, 2, 3, 4])); // Output: 10
-console.log(sumArray([])); // Output: 10
+// const Input = [null, {}, 3]
+const Input = [1, 2]
+
+Array.prototype.last = function() {
+    if(this.length === 0){
+        return -1
+    }
+    return this[this.length - 1]
+    
+};
+
+console.log(Array.prototype.last(Input));
+
+/**
+ * const arr = [1, 2, 3];
+ * arr.last(); // 3
+ */
