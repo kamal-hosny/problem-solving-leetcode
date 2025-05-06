@@ -1,21 +1,24 @@
 /**
- * @return {null|boolean|number|string|Array|Object}
+ * @param {number} n
+ * @return {Function} counter
  */
-
-// const Input = [null, {}, 3]
-const Input = [1, 2]
-
-Array.prototype.last = function() {
-    if(this.length === 0){
-        return -1
-    }
-    return this[this.length - 1]
-    
+var createCounter = function(n) {
+    let now = n - 1
+    return function() {
+         now++
+        return now
+    };
 };
 
-console.log(Array.prototype.last(Input));
+const counter = createCounter(10)
 
-/**
- * const arr = [1, 2, 3];
- * arr.last(); // 3
+console.log(counter());
+console.log(counter());
+console.log(counter());
+
+/** 
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
  */
