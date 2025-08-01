@@ -1,24 +1,23 @@
 /**
- * @param {number} n
- * @return {Function} counter
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
  */
-var createCounter = function(n) {
-    let now = n - 1
-    return function() {
-         now++
-        return now
-    };
+
+let nums = [1,2,3,4]
+let fn = function sum(accum, curr) { return accum + curr * curr; }
+let init = 100
+
+var reduce = function(nums, fn, init) {
+    let result = init
+    for (let index = 0; index < nums.length; index++) {
+        result = fn(result, nums[index]) 
+  
+        
+    }
+    return result
+
 };
 
-const counter = createCounter(10)
-
-console.log(counter());
-console.log(counter());
-console.log(counter());
-
-/** 
- * const counter = createCounter(10)
- * counter() // 10
- * counter() // 11
- * counter() // 12
- */
+console.log(reduce(nums, fn, init));
