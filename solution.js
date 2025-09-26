@@ -1,31 +1,12 @@
-// /**
-//  * @param {number} n
-//  * @return {Function} counter
-//  */
-// var createCounter = function(n) {
+function squareDigits(num){
+if(Number.isInteger){
+    let arr = Array.from(String(num))
     
-//     return function() {
-//         return n++
-//     };
-// };
-
-// const counter = createCounter(10)
-//   console.log(counter());// 10
-//   console.log(counter());// 10
-//   console.log(counter());// 10
-//   console.log(counter());// 10
-//   counter() // 11
-//   counter() // 12
-
-class Adder {
-    constructor(a) {
-        this.a = a
-    }
-
-    add(b) {
-        const sum = this.a + b
-        return sum
-    }
+return Number(arr.map((x) => x ** 2).join(""));
 }
-const addTo2 = new Adder(2);
-addTo2.add(5)
+
+    
+}
+
+console.log(squareDigits(9119));
+console.log(squareDigits(765));
