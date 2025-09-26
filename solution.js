@@ -1,23 +1,31 @@
-/**
- * @param {number[]} nums
- * @param {Function} fn
- * @param {number} init
- * @return {number}
- */
+// /**
+//  * @param {number} n
+//  * @return {Function} counter
+//  */
+// var createCounter = function(n) {
+    
+//     return function() {
+//         return n++
+//     };
+// };
 
-let nums = [1,2,3,4]
-let fn = function sum(accum, curr) { return accum + curr * curr; }
-let init = 100
+// const counter = createCounter(10)
+//   console.log(counter());// 10
+//   console.log(counter());// 10
+//   console.log(counter());// 10
+//   console.log(counter());// 10
+//   counter() // 11
+//   counter() // 12
 
-var reduce = function(nums, fn, init) {
-    let result = init
-    for (let index = 0; index < nums.length; index++) {
-        result = fn(result, nums[index]) 
-  
-        
+class Adder {
+    constructor(a) {
+        this.a = a
     }
-    return result
 
-};
-
-console.log(reduce(nums, fn, init));
+    add(b) {
+        const sum = this.a + b
+        return sum
+    }
+}
+const addTo2 = new Adder(2);
+addTo2.add(5)
