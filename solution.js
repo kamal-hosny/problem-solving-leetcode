@@ -1,9 +1,12 @@
-function alphabetPosition(text) {
-const myArray = text.split('')
-const filter = myArray.filter((x) =>  x.match(/[a-zA-Z]/))
-const convertToNum = filter.map((x) => x.toLowerCase().charCodeAt() - 96)
-
-    return convertToNum.join(" ")
+var number = function(busStops){
+  // Good Luck!
+  let people = 0 
+    for (let i = 0; i < busStops.length; i++) {
+        people += busStops[i][0]
+        people -= busStops[i][1]
+        
+    }
+  return people
 }
 
-console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+console.log(number([[3, 0], [5, 2], [2, 1]]));
