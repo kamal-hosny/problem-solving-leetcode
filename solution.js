@@ -1,12 +1,9 @@
-function squareDigits(num){
-if(Number.isInteger){
-    let arr = Array.from(String(num))
-    
-return Number(arr.map((x) => x ** 2).join(""));
+function alphabetPosition(text) {
+const myArray = text.split('')
+const filter = myArray.filter((x) =>  x.match(/[a-zA-Z]/))
+const convertToNum = filter.map((x) => x.toLowerCase().charCodeAt() - 96)
+
+    return convertToNum.join(" ")
 }
 
-    
-}
-
-console.log(squareDigits(9119));
-console.log(squareDigits(765));
+console.log(alphabetPosition("The sunset sets at twelve o' clock."));
