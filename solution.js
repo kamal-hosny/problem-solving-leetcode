@@ -1,6 +1,7 @@
-function countSmileys(arr) {
-
-  const regex = /^[:;][-~]?[)D]$/;
-  
-  return arr.filter(face => regex.test(face)).length;
-}
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+    return
+};
